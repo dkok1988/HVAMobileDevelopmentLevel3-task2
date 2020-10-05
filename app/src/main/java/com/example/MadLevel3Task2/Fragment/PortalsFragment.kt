@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.MadLevel3Task2.Model.Portal
@@ -61,7 +62,7 @@ class PortalsFragment : Fragment() {
     private fun initViews() {
         // Initialize the recycler view with a linear layout manager, adapter
         rvPortals.layoutManager =
-            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+            GridLayoutManager(context, 2)
         rvPortals.adapter = portalsAdapter
         observeAddPortalResult()
     }
